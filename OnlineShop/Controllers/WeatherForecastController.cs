@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using OnlineShop.Services;
 
 namespace OnlineShop.Controllers
 {
@@ -18,7 +19,7 @@ namespace OnlineShop.Controllers
 
 		private readonly ILogger<WeatherForecastController> _logger;
 
-		public WeatherForecastController(ILogger<WeatherForecastController> logger)
+		public WeatherForecastController(ILogger<WeatherForecastController> logger, UserService userService)
 		{
 			_logger = logger;
 		}
